@@ -36,7 +36,7 @@ public class Executa extends DriversFactory {
 
 	@AfterClass
 	public static void fecharnavegador() {
-		// driver.quit();
+		driver.quit();
 	}
 
 }

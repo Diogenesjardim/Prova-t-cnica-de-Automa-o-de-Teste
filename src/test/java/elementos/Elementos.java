@@ -17,12 +17,12 @@ public class Elementos {
     public  By State = By.cssSelector("#field-state"); 
     public  By PostalCode = By.cssSelector("#field-postalCode"); 
     public  By Country = By.cssSelector("#field-country");
-    public  By from = By.cssSelector("#field_salesRepEmployeeNumber_chosen > a > span");
-    public  By but =  By.cssSelector("#field-creditLimit");
-    public  By Bondur = By.xpath("//*[@id=\"field-salesRepEmployeeNumber\"]/option[11]");
+    public  By fromEmployeer = By.cssSelector("#field_salesRepEmployeeNumber_chosen > a > span");
+    public  By Fixter = By.xpath("//*[@id=\"field_salesRepEmployeeNumber_chosen\"]/a/span");
     public  By CreditLimit = By.xpath("//input[@id='field-creditLimit']");
     public  By Deleted = By.cssSelector("#field-deleted");
     public  By Save = By.id("form-button-save");
-    public  By mensagen = By.xpath("/*[@id=\'report-success\']/p/text()[1]");
+    public  By mensagen = By.cssSelector("#report-success > p");
+    
    
 }

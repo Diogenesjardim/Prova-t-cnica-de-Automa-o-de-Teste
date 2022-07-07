@@ -20,41 +20,29 @@ public class AddUserTest  {
 
 	}
 
-	@Dado("preeencho os dados")
+	@Quando ("preeencho os dados")
 	public void preeenchoOsDados() {
 	  page.cadastrar("joao" );
-	  page.cadastrar("sousa");
-      page.cadastrar("joao sousa ");
-      page.cadastrar("113243345");
-      page.cadastrar("Rua guerreiro");
-      page.cadastrar("190");
-      page.cadastrar("itapevi");
-      page.cadastrar("SP");
-      page.cadastrar("06246-879");
-      page.cadastrar("Brasil");
-      page.cadastrar("Hernandez");
-      page.cadastrar("4.000");
-      page.cadastrar("sim");
+
       
 	}
-
+	
 	@Quando("clicar em salvar")
-	public void clicarEmSalvar() {
-		page.salvar();
-		
-
+	public void clicar_em_salvar() {
+		meto.clicar(el.Save);
+			    
 	}
-
-	@Entao("validamos a mensagem {string}")
-	public void validamos_a_mensagem(String textoEsperado) {
-		meto.validarTexto(el.mensagen, "Your data has been successfully stored into the database.");
-	   
-	}
+	@Entao("Validar a mensagem {string}")
+	public void validar_a_mensagem(String textoEsperado) {
+		meto.submit(el.mensagen);	 
+		meto.validarTexto(textoEsperado, el.mensagen);
+	    
+}
 	  
-		
+}	
 		
 		
 
-	}
+	
 
 

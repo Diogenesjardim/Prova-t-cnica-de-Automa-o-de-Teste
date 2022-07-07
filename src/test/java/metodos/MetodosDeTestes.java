@@ -1,5 +1,6 @@
 package metodos;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.time.Duration;
@@ -22,12 +23,11 @@ public class MetodosDeTestes extends DriversFactory {
 		driver.findElement(elemento).click();
 	}
 
-	public void validarTexto(By elemento, String textoEsperado) {
-		String textoCapturado = driver.findElement(elemento).getText();
-		assertTrue(textoCapturado.contains(textoEsperado));
+	public void validarTexto(String textoEsperado, By elemento) {
+		String texto = driver.findElement(elemento).getText();
+		assertEquals(textoEsperado, texto);
 
 	}
-
 	public void pausa(int tempo) {
 		try {
 			Thread.sleep(tempo);
@@ -37,12 +37,15 @@ public class MetodosDeTestes extends DriversFactory {
 	}
 
 	public void esperarElemento(By elemento) {
-		WebElement element = new WebDriverWait(driver, Duration.ofSeconds(10))
+		WebElement element = new WebDriverWait(driver, Duration.ofSeconds(20))
 				.until(ExpectedConditions.elementToBeClickable(elemento));
 	}
 	
-	public void pesquisar(By texto) {
-		driver.findElement(texto).getText();
+	public void pesquisar(By elemento) {
+		driver.findElement(elemento).getText();
 	}
 
+	public void submit(By elemento) {
+		driver.findElement(elemento).submit();
+	}
 }

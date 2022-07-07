@@ -21,30 +21,32 @@ public class AddUserPage {
 
 	public void cadastrar(String ContactFirstName) {
 		metodos.clicar(el.addUsuario);
-		metodos.escrever(el.Name, "joao" );
-		metodos.escrever(el.LastName, "sousa");
-		metodos.escrever(el.ContactFirsName, "joao sousa ");
-		metodos.escrever(el.Phone, "113243345");
-		metodos.escrever(el.AddressLine1, "Rua guerreiro");
-	 	metodos.escrever(el.AddressLine2,"190");
-		metodos.escrever(el.City, "itapevi");
-		metodos.escrever(el.State, "SP");
-		metodos.escrever(el.PostalCode, "06246-879");	
+		metodos.escrever(el.Name, "Teste Sicredi" );
+		metodos.escrever(el.LastName, "Teste");
+		metodos.escrever(el.ContactFirsName, "Diógenes Jardim");
+		metodos.escrever(el.Phone, "51 9999-9999");
+		metodos.escrever(el.AddressLine1, "Av Assis Brasil, 3970");
+	 	metodos.escrever(el.AddressLine2,"Torre D");
+		metodos.escrever(el.City, "Porto Alegre");
+		metodos.escrever(el.State, "RS");
+		metodos.escrever(el.PostalCode, "91000-000");	
 		metodos.escrever(el.Country, "Brasil");
-	    metodos.clicar(el.from);
-	   // metodos.escrever(el.from,"Hernandez");
-	    //metodos.clicar(el.Bondur);
-		metodos.escrever(el.CreditLimit, "4.000");
+	    metodos.clicar(el.fromEmployeer);
+	    metodos.clicar(el.Fixter);
+		metodos.escrever(el.CreditLimit, "200");
 		metodos.escrever(el.Deleted, "sim");
 		metodos.clicar(el.Save);
-		metodos.esperarElemento(el.mensagen);
+	    metodos.esperarElemento(el.mensagen);
+	
 		
 		
 	}
 	
 	public void salvar() {
 		metodos.clicar(el.Save);
+		
 	}
+	
 	
 	
 }
